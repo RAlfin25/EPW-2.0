@@ -1,357 +1,1660 @@
 * {
-    box-sizing: border-box;
-    margin: 0 auto;
-    position: relative;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-    
-
-h1, h2, h3, a, p, td, th{
-    font-family: 'Inter', sans-serif;
+h1, h2, h3, a, p, td, th {
+  font-family: "Inter", sans-serif;
 }
 
 body {
-    background-image: url('Group133-01.png');
+   
+    background-color: black;
+    background-image: url("Group133-01.png");
     background-size: cover;
 }
 
 a {
-    color: #268AFF; 
-    text-decoration: none;
-
+  color: #268AFF;
+  text-decoration: none;
 }
 
 
 
 /*Header*/
-nav{
-    margin: 40px 0px;
-	height: 80px;
-	display: flex;
-    align-items: center;
-	justify-content: space-between;
-	padding: 32px 200px;
-	position: fixed;
-	top:0;
-	left: 0;
-	right: 0;
-	z-index: 999;
-	transition: .3s;
-
-}
-nav ul li {
-
-	display: inline-block;
-
-}
-ul.menu li{
-	margin-left: 30px; 
-}
-nav ul li a{
-	text-decoration: none;
-	color: white;
-	transition: .2s;
+nav {
+  margin: 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: 0.3s;
 }
 
-.menu {
-    position: relative;
-    right: -200px;
+.menu li {
+  display: inline-block;
+  margin-left: 30px;
+  
 }
+
 
 .menu a{
-	font-size: 25px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
 }
 
-.logo a{
-	font-size: 42px;
-	line-height: 20px;
-}
-nav div a::after{
-	display: block;
-    content: '';
-	padding-top: 1%;
-    border-bottom: solid 3px #fff;
-    padding-bottom: 1%;
-    transform: scaleX(0);
-    transition: transform 300ms ease-in-out;
-}
-nav div a:hover::after{
-	transform: scaleX(1);
+
+.menu a {
+  font-size: 25px;
 }
 
-.logo{	
+
+.menu a::after {
+  display: block;
+  content: "";
+  padding-top: 1%;
+  border-bottom: solid 3px #fff;
+  padding-bottom: 1%;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+nav div a:hover::after {
+  transform: scaleX(1);
+}
+
+.logo {
+  position: relative;
+  margin-top: -15px;
+
+}
+
+
+.logo img {
     position: relative;
-	margin-top: -15px;
-    left: -250px;
-}
-.logo hr {
-	display: inline-block;
-	width: 15px;
-	margin: 2px;
-}
-.logo span {
-	font-size: 14px;
-	margin-left: 2px;
+    top: 5px;
+  width: 300px;
 }
 
-
-img{
-    width: 300px;
-}
 /* Menu */
-main {
-    padding-top: 20px;
-}
+
 
 section {
-        
-        text-align: justify;
-        height: 100vh;	
+  margin: 40px;
+  text-align: justify;
+  height: auto;
 }
-
 
 .container-injection {
-    position: relative;
-    top: 50px;
+  position: relative;
+  top: 0px;
+  display: grid;
+  grid-template-areas: 'teks card';
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  margin: 0px 200px;
+}
+
+.text-inj {
+  grid-area: teks;
+  color: #8dfeff;
+  margin-right: 60px;
+}
+
+.text-inj h1 {
+  font-weight: bolder;
+  font-size: 70px;
+  text-align: left;
+}
+
+.text-inj p {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+
+.text-inj a {
+  font-size: 20px;
+}
+
+.card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1100px;
-    height: 700px;
-}
-
-.text-inj{
-    color: #8DFEFF;
-    margin-right: 60px;
-}
-
-.text-inj h1{
-    font-weight: bolder;
-    font-size: 70px;
-    text-align: left;
-}
-
-.text-inj p{
-    padding: 20px 0px ;
-    font-size: 20px;
-}
-
-.text-inj a{
-    font-size: 20px;
 }
 
 .card-injection {
-
-    width: 1000px;
-    height: 360px;  
-    margin: 0px 30px;
-    background-color: rgba( 138, 36, 142, 0.6);
-    border-radius: 20px;
+  grid-area: card;
+  width: 250px;
+  height: 360px;
+  margin: 0px 30px;
+  background-color: rgba(138, 36, 142, 0.6);
+  border-radius: 20px;
 }
 
 .card-injection h2 {
-    margin: 20px;
-    position: relative;
-    top: 200px;
-    font-size: 30px;
+  margin: 20px;
+  position: relative;
+  top: 200px;
+  font-size: 30px;
 }
 
-.card-injection a{
-    margin: 20px;
-    position: relative;
-    top: 180px;
-    color: white;
-    font-size: 10px;
+.card-injection a {
+  margin: 20px;
+  position: relative;
+  top: 180px;
+  color: white;
+  font-size: 10px;
 }
 
-.card-injection a img{
-    width: 10px;
+.card-injection a img {
+  max-width: 10px;
 }
 
 .card-injection a:hover {
-    transform: translateX(3px);
-    font-size: 12px;
+  transform: translateX(3px);
+  font-size: 12px;
 }
 
 .button {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #268AFF;
-    border-radius: 30px; 
-    width: 400px;
-    height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #268aff;
+  border-radius: 30px;
+  width: 400px;
+  height: 200px;
 }
 
 .button:hover {
-    transform: translateY(3px);
-    border: 1px solid #268AFF;
+  transform: translateY(3px);
+  border: 1px solid #268aff;
 }
 
-    
-
 /*About*/
-
 .about {
-    height: 100vh;
+  height: 160vh;
 }
 
 .container-about {
-  
-    position: relative;
-    height: 550px;
-    width: 1100px;
-    background-color: rgba( 138, 36, 142, 0.6);
-    border-radius: 20px;
-    top: 100px;
+  margin: 0px 150px;
+  position: relative;
+  height: auto;
+  background-color: rgba(138, 36, 142, 0.6);
+  border-radius: 20px;
+  top: 100px;
 }
 
-
-
-.text-abt{
-    position: relative;
-    text-align: right;
-    margin: 0px 75px 0px 75px;
-    top: 20px;
-}
+.text-abt {
+  position: relative;
+  text-align: right;
+  margin: 0px 75px 20px 75px;
+  top: 20px;
+  color: white;
+} 
 
 .text-abt h2 {
-    font-weight: 900;
-    font-size: 30px;
-    
+  font-size: 40px;
 }
-
 
 .text-abt h1 {
-    font-weight: 800;
-    font-size: 50px;
+  font-size: 60px;
 }
 
-.text-abt2{
-    padding-right: 60px;
+.text-abt2 {
+    grid-area: text;
+  color: white;
+  padding-right: 40px;
 }
 
-.text-abt2 h3{
-    line-height: 1.5em;
-    font-weight: bolder;
-    font-size: 30px;
+.text-abt2 h3 {
+  line-height: 1.5em;
+  font-weight: bolder;
+  font-size: 33px;
 }
 
-.text-abt2 p{
-    padding-bottom: 20px;
-    font-size: 20px;
+.text-abt2 p {
+  padding-bottom: 20px;
+  font-size: 22px;
 }
 
 .tentang {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1000px;
-    height: 450px;
-    
+  display: grid;
+  grid-template-areas: 'text inj';
+  align-items: center;
+  justify-content: center;
+
+  height: auto;
+  padding: 40px;
 }
 
+.logo-inj{
+    grid-area: inj;
+  position: relative;
+}
 
-
-.tentang img{
-    width: 350px;
+.logo-inj img{
+    width: 400px;
 }
 
 /*Syarat*/
 .syarat {
-    height: 100vh;
-
+  height: 120vh;
 }
 
 .container-syarat {
-    position: relative;
-    top: 200px;
-    width: 1300px;
-    height: 600px;
-    display: flex;
-    background-color: rgba( 138, 36, 142, 0.6);
-    align-items: center;
-    border-radius: 20px;
-    
+  color: #fff;
+  position: relative;
+  top: 100px;
+  height: auto;
+  display: grid;
+  grid-template-areas: 'head table';
+  background-color: rgba(138, 36, 142, 0.6);
+  align-items: center;
+  border-radius: 20px;
+  margin: 0px 90px;
 }
 
-.container-syarat h1{
-    font-size: 40px;
-    font-weight: bolder;
-    margin: 20px;
-    width: 400px;
-    text-align: right;
+.container-syarat h1 {
+  position: relative;
+  font-size: 60px;
+  font-weight: bolder;
+  margin: 20px;
+  max-width: 400px;
+  text-align: right;
+}
+
+head {
+    grid-area: head;
 }
 
 table {
-    margin: 40px;
-    padding: 40px 0px;
+    grid-area: table;
+  margin: 40px;
+  padding: 40px 0px;
 }
 
 th {
-    line-height: 1.5em;
-    padding-right: 10px;
-    font-size: 2em;
+  line-height: 1.5em;
+  padding-right: 10px;
+  font-size: 2em;
 }
 
 td {
-    font-size: 17px;
-    padding: 5px;
+  font-size: 20px;
+  line-height: 1.5em;
+  padding: 10px;
 }
-
-
 
 /*Footer*/
 
 footer {
-    height: 110vh;
+  height: 150vh;
 }
 
-.foot{
-    position: relative;
-    top: 300px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 800px;
+.foot {
+  position: relative;
+  top: 600px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.foot img{
+.foot-logo {
+  margin-right: 40px;
+}
+
+.foot-logo img {
     width: 300px;
 }
 
-.foot h1{
-    font-size: 60px;
-    border: solid;
-    border-width: 0px 0px 4px 0px;
-    color: white;
+.foot h1 {
+  font-size: 60px;
+  border: solid;
+  border-width: 0px 0px 4px 0px;
+  color: white;
 }
 
 .medsos {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    left: -1px;
-    margin: 0px -30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  left: 30px;
+  width: 345px;
+  margin: 0px -30px;
 }
 
+.foot p {
+  padding-top: 20px;
+  color: white;
+  font-size: 25px;
+}
 
+.foot p img {
+  position: relative;
+  top: 5px;
+  height: 25px;
+}
 
-.foot p{
+@media (max-width: 1248px) {
+    .menu a {
+      font-size: 20px;
+    }
     
-    padding-top: 20px;
-    color: white;
-    font-size: 25px;
-}
+    .logo img {
+      width: 250px;
+    }
+    
+    /* Menu */
+    .injection {
+      height: 100vh;
+    }
+    
+    .text-inj {
+      padding-left: 20px;
+      grid-area: teks;
+      color: #8dfeff;
+    }
+    
+    .text-inj h1 {
+      font-size: 70px;
+      text-align: left;
+    }
+    
+    .text-inj p {
+      padding: 20px 0px;
+      font-size: 20px;
+    }
+    
+    .text-inj a {
+      font-size: 20px;
+    }     
+    
+    .card-injection {
+      grid-area: card;
+      width: 250px;
+      height: 360px;
+    }
+    
 
-.foot p img{
-    position: relative;
-    top: 5px;
-    width: 25px;
+    
+    /*About*/
+    .about {
+      height: 130vh;
+    }
+    
+    .container-about {
+      margin: 0px 60px;
+    }
+    
+    .text-abt {
+      margin: 0px 50px;
+    } 
+    
+    
+    .text-abt2 {
+      padding-right: 12px;
+    }
+    
+    .text-abt2 h3{
+     font-size: 28px;
+    }
+
+    .text-abt2 p{
+      font-size: 16px;
+     }
+    
+    .tentang {
+      display: grid;
+      grid-template-areas: 'text inj';
+      height: auto;
+      padding: 40px;
+    }
+    
+    .logo-inj{
+      grid-area: inj;
+      position: relative;
+      margin: 0px 10px;
+    }
+    
+    .logo-inj img{
+        width: 300px;
+    }
+    
+    /*Syarat*/
+    .syarat {
+      height: 100vh;
+    }
+    
+    .container-syarat {
+      display: grid;
+      grid-template-areas: 'head' 'table';
+      border-radius: 20px;
+      margin: 0px 40px;
+    }
+    
+    .container-syarat h1 {
+      font-size: 60px;
+      margin: 20px;
+      width: 850px;
+    }
+    
+
+    head {
+        grid-area: head;
+    }
+    
+    table {
+      grid-area: table;
+      margin: 0px 40px;
+      padding: 20px 0px;
+    }
+    
+    th {
+      line-height: 1.5em;
+      padding-right: 10px;
+      font-size: 2em;
+    }
+    
+    td {
+      font-size: 18px;
+      line-height: 1.5em;
+      padding: 10px;
+    }
+    
+    /*Footer*/
+    
+    footer {
+      height: 150vh;
+    }
+    
+    .foot {
+      position: relative;
+      top: 600px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    
+    .foot-logo {
+      margin-right: 40px;  
+    }
+    
+    .foot-logo img {
+        width: 300px;
+    }
+    
+    .foot h1 {
+      font-size: 60px;
+      border: solid;
+      border-width: 0px 0px 4px 0px;
+      color: white;
+    }
+    
+    .medsos {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      left: 30px;
+      width: 345px;
+      margin: 0px -30px;
+    }
+    
+    .foot p {
+      padding-top: 20px;
+      color: white;
+      font-size: 25px;
+    }
+    
+    .foot p img {
+      position: relative;
+      top: 5px;
+      height: 25px;
+    }
+
+
+}
+@media (max-width: 1024px) {
+    .menu li {
+        margin-left: 20px; 
+      }
+    
+        .menu a {
+        font-size: 18px;
+      }
+      
+      .logo img {
+        position: relative;
+        top: 10px;
+        width: 250px;
+      }
+      
+      /* Menu */
+      .injection {
+        height: 120vh;
+      }
+
+      .container-injection {
+        position: relative;
+        top: 100px;
+        display: grid;
+        grid-template-areas: 'teks' 'card';
+        height: auto;
+        
+      }
+      
+      .text-inj {
+        padding-left: 50px;
+        grid-area: teks;
+        color: #8dfeff;
+      }
+      
+      .text-inj h1 {
+        font-size: 70px;
+        text-align: left;
+      }
+      
+      .text-inj p {
+        padding: 20px 0px;
+        font-size: 20px;
+      }
+      
+      .text-inj a {
+        font-size: 20px;
+      }     
+      
+      .card-injection {
+        grid-area: card;
+        width: 250px;
+        height: 360px;
+        margin: 0px 50px;
+      }
+
+      
+      /*About*/
+      .about {
+        height: 130vh;
+      }
+      
+      .container-about {
+        margin: 0px 60px;
+      }
+      
+      .text-abt {
+        margin: 0px 50px;
+      } 
+      
+      
+      .text-abt2 {
+        padding-right: 12px;
+      }
+      
+      .text-abt2 h3{
+       font-size: 28px;
+      }
+
+      .text-abt2 p{
+        font-size: 16px;
+       }
+      
+      .tentang {
+        display: grid;
+        grid-template-areas: 'text inj';
+        height: auto;
+        padding: 40px;
+      }
+      
+      .logo-inj{
+        grid-area: inj;
+        position: relative;
+      }
+      
+      .logo-inj img{
+          width: 300px;
+      }
+      
+      /*Syarat*/
+      .syarat {
+        height: 100vh;
+      }
+      
+      .container-syarat {
+        display: grid;
+        grid-template-areas: 'head' 'table';
+        border-radius: 20px;
+        margin: 0px 40px;
+      }
+      
+      .container-syarat h1 {
+        font-size: 60px;
+        margin: 20px;
+        width: 700px;
+      }
+      
+
+      head {
+          grid-area: head;
+      }
+      
+      table {
+        grid-area: table;
+        margin: 0px 40px;
+        padding: 20px 0px;
+      }
+      
+      th {
+        line-height: 1.5em;
+        padding-right: 10px;
+        font-size: 2em;
+      }
+      
+      td {
+        font-size: 18px;
+        line-height: 1.5em;
+        padding: 10px;
+      }
+      
+      /*Footer*/
+      
+      footer {
+        height: 150vh;
+      }
+      
+      .foot {
+        position: relative;
+        top: 600px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      
+      .foot-logo {
+        margin-right: 40px;  
+      }
+      
+      .foot-logo img {
+          width: 300px;
+      }
+      
+      .foot h1 {
+        font-size: 60px;
+        border: solid;
+        border-width: 0px 0px 4px 0px;
+        color: white;
+      }
+      
+      .medsos {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        left: 30px;
+        width: 345px;
+        margin: 0px -30px;
+      }
+      
+      .foot p {
+        padding-top: 20px;
+        color: white;
+        font-size: 25px;
+      }
+      
+      .foot p img {
+        position: relative;
+        top: 5px;
+        height: 25px;
+      }
+
+
+}
+@media (max-width: 900px) {
+      nav{
+        height: 70px;
+        margin: 20px;
+      }
+      .menu li {
+        margin-left: 20px; 
+      }
+      
+      .menu a {
+        font-size: 15px;
+      }
+      
+      .logo img {
+        position: relative;
+        top: 10px;
+        width: 200px;
+      }
+      
+      /* Menu */
+      .injection {
+        height: 120vh;
+      }
+
+      .container-injection {
+        position: relative;
+        top: 100px;
+        display: grid;
+        grid-template-areas: 'teks' 'card';
+        height: auto;
+        
+      }
+      
+      .text-inj {
+        padding-left: 50px;
+        grid-area: teks;
+        color: #8dfeff;
+      }
+      
+      .text-inj h1 {
+        font-size: 70px;
+        text-align: left;
+      }
+      
+      .text-inj p {
+        padding: 20px 0px;
+        font-size: 20px;
+      }
+      
+      .text-inj a {
+        font-size: 20px;
+      }     
+      
+      .card-injection {
+        grid-area: card;
+        width: 250px;
+        height: 360px;
+        margin: 0px 50px;
+      }
+      
+      
+      /*About*/
+      .about {
+        height: 180vh;
+      }
+      
+      .container-about {
+        margin: 0px 60px;
+      }
+      
+      .text-abt {
+        margin: 0px 50px;
+      } 
+      
+      
+      .text-abt2 {
+        padding-right: 12px;
+      }
+      
+      
+      .tentang {
+        display: grid;
+        grid-template-areas: 'text' 'inj';
+        height: auto;
+        padding: 40px;
+      }
+      
+      .logo-inj{
+        grid-area: inj;
+        position: relative;
+        margin: 0px 70px;
+      }
+      
+      .logo-inj img{
+          width: 400px;
+      }
+      
+      /*Syarat*/
+      .syarat {
+        height: 120vh;
+      }
+      
+      .container-syarat {
+        display: grid;
+        grid-template-areas: 'head' 'table';
+        border-radius: 20px;
+        margin: 0px 40px;
+      }
+      
+      .container-syarat h1 {
+        font-size: 50px;
+        margin: 20px;
+        max-width: 620px;
+      }
+      
+      head {
+          grid-area: head;
+      }
+      
+      table {
+        grid-area: table;
+        margin: 0px 40px;
+        padding: 20px 0px;
+      }
+      
+      th {
+        line-height: 1.5em;
+        padding-right: 10px;
+        font-size: 1.5em;
+      }
+      
+      td {
+        font-size: 18px;
+        line-height: 1.5em;
+        padding: 10px;
+      }
+      
+      /*Footer*/
+      
+      footer {
+        height: 150vh;
+      }
+      
+      .foot {
+        position: relative;
+        top: 600px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      
+      .foot-logo {
+        margin-right: 40px;  
+      }
+      
+      .foot-logo img {
+          width: 280px;
+      }
+      
+      .foot h1 {
+        font-size: 53px;
+        border: solid;
+        border-width: 0px 0px 4px 0px;
+        color: white;
+      }
+      
+      .medsos {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        left: 30px;
+        width: 300px;
+        margin: 0px -30px;
+      }
+      
+      .foot p {
+        padding-top: 20px;
+        color: white;
+        font-size: 22px;
+      }
+      
+      .foot p img {
+        position: relative;
+        top: 3px;
+        height: 22px;
+      }
+
+}
+@media (max-width: 820px) {
+      
+    .text-abt h2{
+        font-size: 33px;
+    }
+
+    .text-abt h1{
+        font-size: 45px;
+    }
+    
+    /*Syarat*/
+    .syarat {
+      height: 100vh;
+    }
+    
+    .container-syarat {
+      display: grid;
+      grid-template-areas: 'head' 'table';
+      border-radius: 20px;
+      margin: 0px 40px;
+    }
+    
+    .container-syarat h1 {
+        position: relative;
+      font-size: 45px;
+      margin: 20px;
+      width: 560px;
+    }
+    
+    head {
+        grid-area: head;
+    }
+    
+    table {
+      grid-area: table;
+      margin: 0px 40px;
+      padding: 20px 0px;
+    }
+    
+    th {
+        line-height: 1.5em;
+        padding-right: 10px;
+        font-size: 2em;
+      }
+      
+      td {
+        font-size: 15px;
+        line-height: 1.5em;
+        padding: 10px;
+      }
+    
+    /*Footer*/
+    
+    footer {
+      height: 150vh;
+    }
+    
+    .foot {
+      position: relative;
+      top: 600px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    
+    .foot-logo {
+      margin-right: 40px;  
+    }
+    
+    .foot-logo img {
+        width: 230px;
+    }
+    
+    .foot h1 {
+      font-size: 47px;
+      border: solid;
+      border-width: 0px 0px 4px 0px;
+      color: white;
+    }
+    
+    .medsos {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      left: 30px;
+      width: 273px;
+      margin: 0px -30px;
+    }
+    
+    .foot p {
+      padding-top: 20px;
+      color: white;
+      font-size: 20px;
+    }
+    
+    .foot p img {
+      position: relative;
+      top: 5px;
+      height: 20px;
+    }
+
+}
+@media (max-width: 760px) {
+    nav{
+        height: 60px;
+        margin: 17px;
+    }  
+
+    .menu li {
+      margin-left: 18px; 
+    }
+    
+    .menu a {
+      font-size: 14px;
+    }
+    
+    .logo img {
+        position: relative;
+        top: 8px;
+      width: 180px;
+    }
+    
+    /* Menu */
+    .injection {
+      height: 120vh;
+    }
+
+    .container-injection {
+      position: relative;
+      top: 100px;
+      display: grid;
+      grid-template-areas: 'teks' 'card';
+      height: auto;
+      
+    }
+    
+    .text-inj {
+      padding-left: 60px;
+      grid-area: teks;
+      color: #8dfeff;
+    }
+    
+    .text-inj h1 {
+      font-size: 50px;
+      text-align: left;
+    }
+    
+    .text-inj p {
+      padding: 20px 0px;
+      font-size: 17px;
+    }
+    
+    .text-inj a {
+      font-size: 17px;
+    }     
+    
+    .card-injection {
+      grid-area: card;
+      width: 250px;
+      height: 360px;
+      margin: 0px 50px;
+    }
+    
+    
+    /*About*/
+    .about {
+      height: 180vh;
+    }
+    
+    .container-about {
+      margin: 0px 50px;
+    }
+    
+    .text-abt {
+      margin: 0px 30px;
+    } 
+    
+    .text-abt h2{
+        font-size: 33px;
+    }
+
+    .text-abt h1{
+        font-size: 45px;
+    } 
+
+    .text-abt2 {
+      padding: 0px 23px;
+    }
+    
+    .text-abt2 h3{
+        font-size: 25px;
+      } 
+    
+    .text-abt2 p{
+        font-size: 15px;
+    } 
+
+    .tentang {
+      display: grid;
+      grid-template-areas: 'text' 'inj';
+      height: auto;
+      padding: 40px;
+    }
+    
+    .logo-inj{
+      grid-area: inj;
+      position: relative;
+      margin: 0px 70px;
+    }
+    
+    .logo-inj img{
+        width: 400px;
+    }
+    
+    /*Syarat*/
+    .syarat {
+      height: 120vh;
+    }
+    
+    .container-syarat {
+      display: grid;
+      grid-template-areas: 'head' 'table';
+      border-radius: 20px;
+      margin: 0px 40px;
+    }
+    
+    .container-syarat h1 {
+      font-size: 40px;
+      margin: 20px;
+      max-width: 500px;
+    }
+    
+    head {
+        grid-area: head;
+    }
+    
+    table {
+      grid-area: table;
+      margin: 0px 40px;
+      padding: 20px 0px;
+    }
+    
+    th {
+      line-height: 1.5em;
+      padding-right: 10px;
+      font-size: 1.5em;
+    }
+    
+    td {
+      font-size: 15px;
+      line-height: 1.5em;
+      padding: 10px;
+    }
+    
+    /*Footer*/
+    
+    footer {
+      height: 110vh;
+    }
+    
+    .foot {
+      position: relative;
+      top: 500px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    
+    .foot-logo {
+      margin-right: 40px;  
+    }
+    
+    .foot-logo img {
+        width: 180px;
+    }
+    
+    .foot h1 {
+      font-size: 40px;
+      border: solid;
+      border-width: 0px 0px 4px 0px;
+      color: white;
+    }
+    
+    .medsos {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      left: 30px;
+      width: 232px;
+      margin: 0px -30px;
+    }
+    
+    .foot p {
+      padding-top: 10px;
+      color: white;
+      font-size: 17px;
+    }
+    
+    .foot p img {
+      position: relative;
+      top: 2px;
+      height: 17px;
+    }
+
+}
+@media (max-width: 680px) {
+    nav{
+        height: 50px;
+        margin: 15px;
+    }  
+
+    .menu li {
+      margin-left: 10px; 
+    }
+    
+    .menu a {
+      font-size: 13px;
+    }
+    
+    .logo img {
+        position: relative;
+        top: 8.5px;
+      width: 130px;
+    }
+    
+    /* Menu */
+    .injection {
+      height: 80vh;
+    }
+
+    .container-injection {
+      position: relative;
+      top: 50px;
+      display: grid;
+      grid-template-areas: 'teks' 'card';
+      height: auto;
+    }
+    
+    .text-inj {
+      margin: 30px 40px 30px 0px;
+      grid-area: teks;
+      color: #8dfeff;
+    }
+    
+    .text-inj h1 {
+      font-size: 40px;
+      text-align: left;
+    }
+    
+    .text-inj p {
+      padding: 10px 0px;
+      font-size: 17px;
+    }
+    
+    .text-inj a {
+      font-size: 17px;
+    }     
+    
+    .card-injection {
+      grid-area: card;
+      width: 200px;
+      height: 250px;
+      margin: 0px 35px;
+    }
+    
+    .card-injection h2 {
+        margin: 20px;
+        position: relative;
+        top: 80px;
+        font-size: 20px;
+      }
+      
+      .card-injection a {
+        margin: 20px;
+        position: relative;
+        top: 70px;
+        color: white;
+        font-size: 10px;
+      }
+
+    
+    /*About*/
+    .about {
+      height: 140vh;
+    }
+    
+    .container-about {
+      margin: 0px 8px;
+    }
+    
+    .text-abt {
+      margin: 0px 45px;
+    } 
+    
+    .text-abt h2 {
+        font-size: 25px;
+       }
+
+    .text-abt h1 {
+        font-size: 35px;
+       }
+
+    .text-abt2 {
+      margin: 0px -15px;
+    }
+    
+    .text-abt2 h3 {
+       font-size: 18px;
+      }
+
+      .text-abt2 p{
+        font-size: 13px;
+      }
+    
+    .tentang {
+      display: grid;
+      grid-template-areas: 'text' 'inj';
+      height: auto;
+      padding: 40px;
+    }
+    
+    .logo-inj{
+      grid-area: inj;
+      position: relative;
+      margin: 0px 70px;
+    }
+    
+    .logo-inj img{
+        width: 300px;
+    }
+    
+    /*Syarat*/
+    .syarat {
+      height: 80vh;
+    }
+    
+    .container-syarat {
+      display: grid;
+      grid-template-areas: 'head' 'table';
+      border-radius: 20px;
+      margin: 0;
+    }
+    
+    .container-syarat h1 {
+      text-align: right;
+      font-size: 30px;
+      margin: 20px;
+      width: 600px;
+    }
+    
+    head {
+        grid-area: head;
+    }
+    
+    table {
+      grid-area: table;
+      margin: 0px 40px;
+      padding: 20px 0px;
+    }
+    
+    th {
+      line-height: 1.5em;
+      padding-right: 10px;
+      font-size: 1.5em;
+    }
+    
+    td {
+      font-size: 13px;
+      line-height: 1.5em;
+      padding: 10px;
+    }
+    
+    /*Footer*/
+    
+    footer {
+      height: 110vh;
+    }
+    
+    .foot {
+      position: relative;
+      top: 500px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    
+    .foot-logo {
+      margin-right: 40px;  
+    }
+    
+    .foot-logo img {
+        width: 150px;
+    }
+    
+    .foot h1 {
+      font-size: 35px;
+      border: solid;
+      border-width: 0px 0px 4px 0px;
+      color: white;
+    }
+    
+    .medsos {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      left: 30px;
+      width: 203px;
+      margin: 0px -30px;
+    }
+    
+    .foot p {
+      padding-top: 10px;
+      color: white;
+      font-size: 15px;
+    }
+    
+    .foot p img {
+      position: relative;
+      top: 2px;
+      height: 15px;
+    }
+
+}
+@media (max-width: 500px) {
+    nav{
+        height: 50px;
+        margin: 15px;
+    }  
+
+    .menu li {
+      margin-left: 10px; 
+    }
+    
+    .menu a {
+      font-size: 10px;
+    }
+    
+    .logo img {
+        position: relative;
+        top: 10px;
+      width: 100px;
+    }
+    
+    /* Menu */
+    .injection {
+      height: 80vh;
+    }
+
+    .container-injection {
+      position: relative;
+      top: 50px;
+      display: grid;
+      grid-template-areas: 'teks' 'card';
+      height: auto;
+      
+    }
+    
+    .text-inj {
+      margin: 20px 0px 20px -30px;
+      grid-area: teks;
+      color: #8dfeff;
+    }
+    
+    .text-inj h1 {
+      font-size: 40px;
+      text-align: left;
+    }
+    
+    .text-inj p {
+      padding: 10px 0px;
+      font-size: 17px;
+    }
+    
+    .text-inj a {
+      font-size: 15px;
+    }     
+    
+    .card-injection {
+      grid-area: card;
+      width: 150px;
+      height: 200px;
+      margin: 0px 20px;
+    }
+    
+    .card-injection h2 {
+        margin: 20px;
+        position: relative;
+        top: 80px;
+        font-size: 20px;
+      }
+      
+      .card-injection a {
+        margin: 20px;
+        position: relative;
+        top: 70px;
+        color: white;
+        font-size: 10px;
+      }
+
+    .button {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #268aff;
+      border-radius: 30px;
+      width: 100px;
+      height: 50px;
+    }
+    
+    /*About*/
+    .about {
+      height: 140vh;
+    }
+    
+    .container-about {
+      margin: 0px 15px;
+    }
+    
+    .text-abt {
+      margin: 0px 10px;
+    } 
+    
+    .text-abt h2 {
+        font-size: 20px;
+       }
+
+    .text-abt h1 {
+        font-size: 30px;
+       }
+
+    .text-abt2 {
+      margin: 0px 60px;
+    }
+    
+    .text-abt2 h3 {
+       font-size: 15px;
+      }
+
+      .text-abt2 p{
+        font-size: 10px;
+      }
+    
+    .tentang {
+      display: grid;
+      grid-template-areas: 'text' 'inj';
+      height: auto;
+      padding: 40px;
+    }
+    
+    .logo-inj{
+      grid-area: inj;
+      position: relative;
+      margin: 0px 70px;
+    }
+    
+    .logo-inj img{
+        width: 300px;
+    }
+    
+    /*Syarat*/
+    .syarat {
+      height: 60vh;
+    }
+    
+    .container-syarat {
+      display: grid;
+      grid-template-areas: 'head' 'table';
+      border-radius: 20px;
+      margin: 0;
+    }
+    
+    .container-syarat h1 {
+      text-align: right;
+      font-size: 20px;
+      margin: 20px;
+      width: 340px;
+    }
+    
+    head {
+        grid-area: head;
+    }
+    
+    table {
+      grid-area: table;
+      margin: 0px 40px;
+      padding: 20px 0px;
+    }
+    
+    th {
+      line-height: 1.5em;
+      padding-right: 10px;
+      font-size: 1em;
+    }
+    
+    td {
+      font-size: 10px;
+      line-height: 1.5em;
+      padding: 10px;
+    }
+    
+    /*Footer*/
+    
+    footer {
+      height: 100vh;
+    }
+    
+    .foot {
+      position: relative;
+      top: 500px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    
+    .foot-logo {
+      margin-right: 40px;  
+    }
+    
+    .foot-logo img {
+        width: 100px;
+    }
+    
+    .foot h1 {
+      font-size: 30px;
+      border: solid;
+      border-width: 0px 0px 4px 0px;
+      color: white;
+    }
+    
+    .medsos {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      left: 30px;
+      width: 172px;
+      margin: 0px -30px;
+    }
+    
+    .foot p {
+      padding-top: 10px;
+      color: white;
+      font-size: 10px;
+    }
+    
+    .foot p img {
+      position: relative;
+      top: 3px;
+      height: 10px;
+    }
+
 }
